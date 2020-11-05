@@ -1,5 +1,7 @@
 package stack.ValidParentheses;
 
+import org.junit.Test;
+
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -11,7 +13,6 @@ public class ValidParentheses {
         }
 
         Deque<Character> stack = new LinkedList<>();
-
 
 //      当遇到左括号，向栈中添加对应的右括号
 //      如果遇到右括号，那么就与栈顶元素对比
@@ -38,5 +39,10 @@ public class ValidParentheses {
         } else {
             return false;
         }
+    }
+
+    @Test
+    public void test() {
+        System.out.println(isValid("{}"));
     }
 }
