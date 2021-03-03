@@ -17,7 +17,7 @@ public class MergeSort {
             for (int i = 0; i < len; i += 2 * step) {
                 int mid = i + step - 1;
 
-                if (mid > len - 1) {
+                if (mid >= len - 1) {//不存在第二个子序列,直接跳过
                     continue;
                 }
                 int h = i + 2 * step - 1;
