@@ -12,10 +12,9 @@ public class MergeSort {
 
     public void mSort2(int[] a) {
         int len = a.length;
-        int step = 1;
+        int step = 1;  //步长
         while (step < len) {
             for (int i = 0; i < step; i += 2 * step) {
-                int l = i;
                 int mid = i + step - 1;
 
                 if (mid > len - 1) {
@@ -25,7 +24,7 @@ public class MergeSort {
                 if (h > len) {
                     h = len - 1;
                 }
-                merge(a, l, mid, h);
+                merge(a, i, mid, h);
             }
             step *= 2;
         }
